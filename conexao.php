@@ -22,10 +22,10 @@ if($result){
 $username = 'root';
 $password = 'carcass';
 
-$id = 1;
+$parametro_id = 1;
 try {
   $conn = new PDO('mysql:host=localhost;dbname=estoque', $username, $password);
-  $stmt = $conn->prepare('SELECT * FROM produto WHERE id = :id');
+  $stmt = $conn->prepare('SELECT * FROM produto WHERE id = :$parametro_id);
   $stmt->execute(array('id' => $id));
  
   $result = $stmt->fetchAll();
