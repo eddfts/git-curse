@@ -15,10 +15,10 @@ $sql = mysqli_query($link, "SELECT * FROM produto") or die(
 	mysqli_error($link) //caso haja um erro na consulta
 );
 
-while($aux = mysqli_fetch_assoc($sql)) { echo "-----------------------------------------
-  "; echo "id:".$aux["id"]."
-  "; echo "nome:".$aux["nome"]."
-  ";
+while($campo = mysqli_fetch_assoc($sql)) { echo "-----------------------------------------"; 
+   echo "id:".$campo["id"].""; 
+   echo "nome:".$campo["nome"]."";
+   echo "</br>";
 }
 
 
